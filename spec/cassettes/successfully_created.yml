@@ -1,0 +1,141 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:test@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: Success
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 22 May 2015 06:45:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"router_ip": "10.0.0.10"}'
+    http_version:
+  recorded_at: Fri, 22 May 2015 06:45:45 GMT
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Oct 2015 10:14:46 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.11
+    body:
+      encoding: UTF-8
+      string: 'ERROR: VDC r3-acidre does not exist'
+    http_version:
+  recorded_at: Thu, 29 Oct 2015 10:11:49 GMT
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Oct 2015 10:20:28 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.11
+    body:
+      encoding: UTF-8
+      string: 'ERROR: VDC r3-acidre does not exist'
+    http_version:
+  recorded_at: Thu, 29 Oct 2015 10:17:31 GMT
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Oct 2015 10:36:33 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.11
+    body:
+      encoding: UTF-8
+      string: 'ERROR: VDC r3-acidre does not exist'
+    http_version:
+  recorded_at: Thu, 29 Oct 2015 10:33:36 GMT
+recorded_with: VCR 2.9.3

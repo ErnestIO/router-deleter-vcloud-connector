@@ -1,0 +1,8 @@
+dependencies:
+  override:
+    - make deps
+
+test:
+  override:
+    - make test
+    - make lint

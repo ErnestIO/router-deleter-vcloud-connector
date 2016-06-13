@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:test@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Host:
+      - vse-creator-service.ernest.io
+      Connection:
+      - close
+      X-Powered-By:
+      - PHP/5.5.20
+      Content-Type:
+      - text/html
+    body:
+      encoding: UTF-8
+      string: |
+        VDC  does not exist<br />
+        <b>Fatal error</b>:  Call to a member function createEdgeGateways() on a non-object in <b>/Users/kumulo/Documents/dev/carrenza/r3labs/vse-creator-service/index.php</b> on line <b>119</b><br />
+    http_version:
+  recorded_at: Fri, 22 May 2015 06:23:40 GMT
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Oct 2015 10:28:21 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.11
+    body:
+      encoding: UTF-8
+      string: 'ERROR: VDC r3-acidre does not exist'
+    http_version:
+  recorded_at: Thu, 29 Oct 2015 10:25:24 GMT
+- request:
+    method: delete
+    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    body:
+      encoding: UTF-8
+      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 29 Oct 2015 10:29:33 GMT
+      Content-Type:
+      - text/html
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.11
+    body:
+      encoding: UTF-8
+      string: 'ERROR: VDC r3-acidre does not exist'
+    http_version:
+  recorded_at: Thu, 29 Oct 2015 10:26:36 GMT
+recorded_with: VCR 2.9.3
