@@ -4,8 +4,8 @@ VCloud interfacte for creating routers
 
 ## Build status
 
-* master:  [![CircleCI Master](https://circleci.com/gh/r3labs/router-deleter-vcloud-connector/tree/master.svg?style=svg&circle-token=627e89c447fe342aff9815ca146b081a37c075ad)](https://circleci.com/gh/r3labs/router-deleter-vcloud-connector/tree/master)
-* develop: [![CircleCI Develop](https://circleci.com/gh/r3labs/router-deleter-vcloud-connector/tree/develop.svg?style=svg&circle-token=627e89c447fe342aff9815ca146b081a37c075ad)](https://circleci.com/gh/r3labs/router-deleter-vcloud-connector/tree/develop)
+* master: [![CircleCI](https://circleci.com/gh/ErnestIO/router-deleter-vcloud-connector/tree/master.svg?style=svg)](https://circleci.com/gh/ErnestIO/router-deleter-vcloud-connector/tree/master)
+* develop: [![CircleCI](https://circleci.com/gh/ErnestIO/router-deleter-vcloud-connector/tree/develop.svg?style=svg)](https://circleci.com/gh/ErnestIO/router-deleter-vcloud-connector/tree/develop)
 
 ## Installation
 
