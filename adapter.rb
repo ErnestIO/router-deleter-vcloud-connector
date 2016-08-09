@@ -55,7 +55,7 @@ end
 
 unless defined? @@test
   loop do
-    begin 
+    begin
       NATS.start(servers: [ENV['NATS_URI']]) do
         NATS.subscribe 'router.delete.vcloud' do |msg, _rply, sub|
           @data = { id: SecureRandom.uuid, type: sub }
