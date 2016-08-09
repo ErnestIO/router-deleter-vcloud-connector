@@ -54,13 +54,20 @@ def path
 end
 
 unless defined? @@test
-  NATS.start(servers: [ENV['NATS_URI']]) do
-    NATS.subscribe 'router.delete.vcloud' do |msg, _rply, sub|
-      @data = { id: SecureRandom.uuid, type: sub }
-      @data.merge! JSON.parse(msg, symbolize_names: true)
+  loop do
+    begin
+      NATS.start(servers: [ENV['NATS_URI']]) do
+        NATS.subscribe 'router.delete.vcloud' do |msg, _rply, sub|
+          @data = { id: SecureRandom.uuid, type: sub }
+          @data.merge! JSON.parse(msg, symbolize_names: true)
 
-      @data[:type] = delete_router(@data)
-      NATS.publish(@data[:type], @data.to_json)
+          @data[:type] = delete_router(@data)
+          NATS.publish(@data[:type], @data.to_json)
+        end
+      end
+    rescue NATS::ConnectError
+      puts "Error connecting to nats on #{ENV['NATS_URI']}, retrying in 5 seconds.."
+      sleep 5
     end
   end
 end
