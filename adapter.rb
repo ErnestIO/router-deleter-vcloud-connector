@@ -45,7 +45,7 @@ def https_request(url, req)
   http.read_timeout = 720
   http.use_ssl = true
   res = http.start { |h| h.request(req) }
-  fail res.message if res.code != '200'
+  raise res.message if res.code != '200'
   res.body
 end
 
