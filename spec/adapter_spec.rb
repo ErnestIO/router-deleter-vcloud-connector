@@ -36,12 +36,6 @@ describe 'vcloud_router_creator_microservice' do
         end
       end
     end
-
-    describe 'when the message does not accomplish the retry requirements' do
-      let!(:data) { {} }
-      it 'should call vse-creator api' do
-        expect(delete_router(data)).to eq false
-      end
-    end
+    
   end
 end
