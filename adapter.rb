@@ -11,17 +11,12 @@ require 'net/https'
 require 'json'
 
 def delete_router(data)
-  return false unless retry?(data)
   vse_delete_router(data)
   'router.delete.vcloud.done'
 rescue StandardError => e
   puts e
   data['error'] = { code: 0, message: e.to_s }
   'router.delete.vcloud.done' # May need to return a proper status code from the vse
-end
-
-def retry?(data)
-  data[:router_type] == 'vcloud' && data.values_at(:datacenter_name, :client_name).compact.length == 2
 end
 
 def vse_delete_router(data)
@@ -36,7 +31,7 @@ def prepare_request(url, data)
   req.basic_auth data[:datacenter_username], data[:datacenter_password]
   req.body = { 'vdc-name'     => data[:datacenter_name],
                'org-name'     => credentials.last,
-               'router-name'  => data[:router_name] }.to_json
+               'router-name'  => data[:name] }.to_json
   req
 end
 
