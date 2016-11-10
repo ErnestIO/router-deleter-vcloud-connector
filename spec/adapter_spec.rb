@@ -36,6 +36,5 @@ describe 'vcloud_router_creator_microservice' do
         end
       end
     end
-    
   end
 end
