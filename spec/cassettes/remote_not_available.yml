@@ -2,10 +2,10 @@
 http_interactions:
 - request:
     method: delete
-    uri: https://acidre%40r3labs-development:test@vse-creator-service.ernest.io/router
+    uri: https://user%40org:test@vse-creator-service.ernest.io/router
     body:
       encoding: UTF-8
-      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+      string: '{"vdc-name":"r3-user","org-name":"org","router-name":"test"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -35,10 +35,10 @@ http_interactions:
   recorded_at: Fri, 22 May 2015 06:23:40 GMT
 - request:
     method: delete
-    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    uri: https://user%40org:@vse-creator-service.ernest.io/router
     body:
       encoding: UTF-8
-      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+      string: '{"vdc-name":"r3-user","org-name":"org","router-name":"test"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -65,15 +65,15 @@ http_interactions:
       - PHP/5.5.9-1ubuntu4.11
     body:
       encoding: UTF-8
-      string: 'ERROR: VDC r3-acidre does not exist'
+      string: 'ERROR: VDC r3-user does not exist'
     http_version:
   recorded_at: Thu, 29 Oct 2015 10:25:24 GMT
 - request:
     method: delete
-    uri: https://acidre%40r3labs-development:@vse-creator-service.ernest.io/router
+    uri: https://user%40org:@vse-creator-service.ernest.io/router
     body:
       encoding: UTF-8
-      string: '{"vdc-name":"r3-acidre","org-name":"r3labs-development","router-name":"test"}'
+      string: '{"vdc-name":"r3-user","org-name":"org","router-name":"test"}'
     headers:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
@@ -100,7 +100,7 @@ http_interactions:
       - PHP/5.5.9-1ubuntu4.11
     body:
       encoding: UTF-8
-      string: 'ERROR: VDC r3-acidre does not exist'
+      string: 'ERROR: VDC r3-user does not exist'
     http_version:
   recorded_at: Thu, 29 Oct 2015 10:26:36 GMT
 recorded_with: VCR 2.9.3

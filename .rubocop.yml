@@ -7,6 +7,9 @@ Style/ClassVars:
 Metrics/LineLength:
   Max: 120
 
+Metrics/AbcSize:
+  Max: 50
+
 Documentation:
   Enabled: false
 
