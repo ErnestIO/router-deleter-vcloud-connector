@@ -14,8 +14,8 @@ describe 'vcloud_router_creator_microservice' do
     let!(:data) do
       { router_type:     'vcloud',
         datacenter_name: 'r3-acidre',
-        datacenter_username: 'acidre@r3labs-development',
-        datacenter_password: 'test',
+        datacenter_username: 'Sa8DjqBt60Mt9QbIDzWRH29hchm/tR1PJFY3jWn5XiE=',
+        datacenter_password: 'x5s8ecbnCwfbks4+Uoo9tf+Mb5Aa9Op3fXxoPQ==',
         client_name:     'r3labs-development',
         vse_url:         'https://vse-creator-service.ernest.io',
         name:     'test' }

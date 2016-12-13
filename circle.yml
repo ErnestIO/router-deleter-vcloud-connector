@@ -1,3 +1,7 @@
+machine:
+  environment:
+    ERNEST_CRYPTO_KEY: mMYlPIvI11z20H1BnBmB223355667788
+
 dependencies:
   override:
     - make deps

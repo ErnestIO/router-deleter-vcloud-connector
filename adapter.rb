@@ -10,6 +10,10 @@ require 'net/http'
 require 'net/https'
 require 'json'
 
+$saltlen = 8
+$keylen = 32
+$iterations = 10002
+
 def delete_router(data)
   vse_delete_router(data)
   'router.delete.vcloud.done'
@@ -26,9 +30,11 @@ def vse_delete_router(data)
 end
 
 def prepare_request(url, data)
-  credentials = data[:datacenter_username].split('@')
+  usr = decrypt data[:datacenter_username]
+  pwd = decrypt data[:datacenter_password]
+  credentials = usr.split('@')
   req = Net::HTTP::Delete.new(url.path)
-  req.basic_auth data[:datacenter_username], data[:datacenter_password]
+  req.basic_auth usr, pwd
   req.body = { 'vdc-name'     => data[:datacenter_name],
                'org-name'     => credentials.last,
                'router-name'  => data[:name] }.to_json
@@ -46,6 +52,21 @@ end
 
 def path
   'router'
+end
+
+
+def decrypt(encrypted)
+  password = ENV['ERNEST_CRYPTO_KEY']
+  data = Base64.decode64(encrypted)
+  salt = data[0,$saltlen]
+  data = data[$saltlen, data.size]
+  cipher = OpenSSL::Cipher::Cipher.new("AES-256-CFB")
+  key_iv = OpenSSL::PKCS5.pbkdf2_hmac(password, salt, $iterations, $keylen+cipher.iv_len, "md5")
+  cipher.key = key_iv[0, cipher.key_len]
+  cipher.iv = key_iv[cipher.key_len, cipher.iv_len]
+  cipher.decrypt
+  data = cipher.update(data) + cipher.final
+  data[cipher.iv_len, data.size]
 end
 
 unless defined? @@test
