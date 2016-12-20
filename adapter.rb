@@ -9,6 +9,7 @@ require 'nats/client'
 require 'net/http'
 require 'net/https'
 require 'json'
+require 'base64'
 
 def delete_router(data)
   vse_delete_router(data)
